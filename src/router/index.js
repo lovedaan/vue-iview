@@ -23,13 +23,14 @@ router.beforeEach((to, form, next) => {
   if(to.meta && to.meta.title) {
     window.document.title = to.meta.title
   }
-  if(to.name !== 'login') {
+  next()
+  /*if(to.name !== 'login') {
     if(USER_TOKEN) next()
     else next({name: 'login'})
   }else{
     if(USER_TOKEN) next({name: 'home'})
     else next()
-  }
+  }*/
 });
 // 进入路由页面后触发, 一般在路由进去时设置loading，在进入之后设置为false
 router.afterEach((to, form) => {

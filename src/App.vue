@@ -1,9 +1,5 @@
 <template>
   <div id="app">
-    <div class="nav">
-      <router-link to="/home">首页</router-link>
-      <router-link to="/about">关于</router-link>
-    </div>
     <!-- <keep-alive></keep-alive> -->
     <router-view></router-view>
   </div>
@@ -18,6 +14,12 @@ export default {
 </script>
 
 <style lang="less">
+html, body, #app {
+  height: 100%;
+}
+body{
+  margin: 0;
+}
   .active{
     color: red;
     font-size: 40px;
